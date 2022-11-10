@@ -1,0 +1,35 @@
+<style>
+    *{font-family: Poppins; margin-left: 4px;}
+    .title_content{font-weight: 700;}
+    .about_contact{
+        background-image: url(https://rockwellautomation.scene7.com/is/image/rockwellautomation/af_blue_purple_valueprop_bg.2560.png);  
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: whitesmoke;
+        font-weight: 560;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    </style>
+
+<h1>PHONE CONTACT DETAILS</h1>
+<hr /><br />
+
+<p class="title_content">
+    Phone Number <%= phone_contact.id %>
+</p>
+
+<table class="about_contact" cellpadding="4px">
+    <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td><%= phone_contact.fullname %></td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td>:</td>
+        <td><%= phone_contact.telephone %></td>
+    </tr> 
+</table>
+
+

@@ -1,0 +1,62 @@
+<style>
+    * {font-family: Poppins; margin-left: 4px;}
+    .send{padding-top: 28px;}
+</style>
+
+<h1>Remedial Sesi 23 - Tugas NodeJS (4)</h1>
+<h4>Dzaru Rizky Fathan Fortuna (HSB FSD #3)</h4>
+<hr /><br /><br />
+
+<form action="/" method="post">
+    <table cellpadding="8px">
+        <tr>
+            <td><label>Full Name</label></td>
+            <td>:</td>
+            <td>
+                <input type= "text" name = "fullname" required />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Phone Number</label></td>
+            <td>:</td>
+            <td>
+                <input type= "text" name="phone_number" required />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="send">
+                <button type= "submit">ADD CONTACT</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<br /><hr /><br /><br />
+
+<table border="1px" cellpadding="10px">
+    <tr>
+        <th>Full Name</th>
+        <th>Phone Number</th>
+        <th colspan="3">Actions</th>
+    </tr>
+        <% phone_contact.forEach((ct, index) => { %>
+    <tr>
+        <td><%= ct.fullname %></td>
+        <td><%= ct.telephone %></td>
+        <td>
+            <a href='/<%= ct.id %>'><button>Detail</button></a>
+        </td> 
+        <td>
+            <a href='/<%= ct.id %>/edit'><button>Edit</button></a>
+        </td>
+        <td>
+            <a href='/<%= ct.id %>/delete'><button>Delete</button></a>
+        </td>
+    </tr>
+        <% }) %>
+    </table>
+
+
+
+
+

@@ -1,0 +1,31 @@
+<style>
+    *{font-family: Poppins;}
+    .save{padding-top: 28px;}
+</style>
+
+<h1>CHANGE PHONE CONTACT</h1>
+<hr /><br />
+
+<form action="/<%= phone_contact.id %>/edit" method="post">
+    <table cellpadding="8px">
+        <tr>
+            <td><label>Full Name</label></td>
+            <td>:</td>
+            <td>
+                <input type= "text" name = "fullname" value="<%= phone_contact.fullname %>" required />
+            </td>
+        </tr>
+        <tr>
+            <td><label>Phone Number</label></td>
+            <td>:</td>
+            <td>
+                <input type= "text" name="phone_number" value="<%= phone_contact.telephone %>" required />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="save">
+                <button type= "submit">SAVE CHANGES</button>
+            </td>
+        </tr>
+    </table>
+</form>
